@@ -25,6 +25,14 @@ const invoiceSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
+    materialCost: {
+        type: Number,
+        required: false
+    },
+    labourCost: {
+        type: Number,
+        required: false
+    },
     date: {
         type: Date,
         default: Date.now
@@ -33,15 +41,15 @@ const invoiceSchema = new mongoose.Schema({
         {
             itemName: {
                 type: String,
-                required: true
+                required: false
             },
             quantity: {
                 type: Number,
-                required: true
+                required: false
             },
             price: {
                 type: Number,
-                required: true
+                required: false
             }
         }
     ],
