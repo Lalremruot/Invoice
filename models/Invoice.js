@@ -5,18 +5,22 @@ const invoiceSchema = new mongoose.Schema({
         type: String,
         unique: true
     },
-    shopName: {
-        type: String,
-        required: true
-    },
-    contactNumber: {
-        type: Number,
-        required: true
-    },
-    shopAddress: {
-        type: String,
-        required: true
-    },
+    // slNo: {
+    //     type: String,
+    //     unique: true
+    // },
+    // shopName: {
+    //     type: String,
+    //     required: true
+    // },
+    // contactNumber: {
+    //     type: Number,
+    //     required: true
+    // },
+    // shopAddress: {
+    //     type: String,
+    //     required: true
+    // },
     customerName: {
         type: String,
         required: true
@@ -37,34 +41,34 @@ const invoiceSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    items: [
-        {
-            itemName: {
-                type: String,
-                required: false
-            },
-            quantity: {
-                type: Number,
-                required: false
-            },
-            price: {
-                type: Number,
-                required: false
-            }
-        }
-    ],
-    tax: {
-        type: Number,
-        default: 0
-    },
+    // items: [
+    //     {
+    //         itemName: {
+    //             type: String,
+    //             required: false
+    //         },
+    //         quantity: {
+    //             type: Number,
+    //             required: false
+    //         },
+    //         price: {
+    //             type: Number,
+    //             required: false
+    //         }
+    //     }
+    // ],
+    // tax: {
+    //     type: Number,
+    //     default: 0
+    // },
     totalAmount: {
         type: Number,
         required: true
     },
-    due: {
-        type: Number,
-        default: 0
-    },
+    // due: {
+    //     type: Number,
+    //     default: 0
+    // },
 })
 
 const invoice = mongoose.model("Invoice", invoiceSchema);
